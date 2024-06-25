@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+class car{
+
+    constructor(make, model){
+         this.make=make;    //property 
+         this.model=model;
+    }
+    start(){
+        console.log(this.make,this.model)  //method 
+    }
+    
+}
+
+let mycar = new car("Toyota", "Camry")
+
+console.log (car)
+mycar.start()
+
+class ElectricCar extends car{
+
+   constructor(make, model, batterySize) {
+    super(make , model);
+    this.batterySize = batterySize;
+    }
+}
+
+let car1 = new ElectricCar("BMW", "M440I", 100)
+
+console.log(car1);
+
+
+
+class Account{
+
+    #_balance; //private property
+     
+    deposit(x){     //ايداع
+      this.#_balance += x    // this.#_balance = this.#_balance + x
+      console.log(this.#_balance)
+      
+    } 
+    
+    withdraw(y){  //سحب 
+      this.#_balance -= y   // this.#_balance = this.#_balance + y
+
+      if(x>0 && y < this.#_balance){
+        console.log( this.#_balance)  // القيمه الجديده بعد السحب 
+      }
+    }
+    setbalance( balance) {
+        this.#_balance = balance;
+    }
+    getbalance() {
+        return this.#_balance;
+    }
+}
+</script>
+</html>
