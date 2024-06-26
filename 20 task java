@@ -1,0 +1,135 @@
+// task 1
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(function(num) {
+  return num * num;
+});
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+// task 2
+
+const numbers = [5, 10, 15, 20, 25];
+const numbersGreaterThan10 = numbers.filter(function(num) {
+  return num > 10;
+});
+console.log(numbersGreaterThan10); // Output: [15, 20, 25]
+
+// task 3
+const strings = ['apple', 'banana', 'cherry'];
+strings.forEach(function(str) {
+  console.log(str.toUpperCase());
+});
+
+// task 4
+const objects = [
+  { name: 'John', age: 30 },
+  { name: 'Jane', age: 25 },
+  { name: 'Doe', age: 35 }
+];
+const names = objects.map(function(obj) {
+  return obj.name;
+});
+console.log(names); // Output: ['John', 'Jane', 'Doe']
+
+//task 5
+const objects = [
+  { id: 1, category: 'A' },
+  { id: 2, category: 'B' },
+  { id: 3, category: 'A' },
+  { id: 4, category: 'C' }
+];
+const categoryAObjects = objects.filter(function(obj) {
+  return obj.category === 'A';
+});
+console.log(categoryAObjects);
+
+
+//task 6
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+numbers.forEach(functi
+on(num) {
+  sum += num;
+});
+console.log(sum);
+
+//task 7
+const strings = ['apple', 'banana', 'cherry'];
+
+const reversedStrings = strings.map(function(str) {
+  return str.split('').reverse().join('');
+});
+
+console.log(reversedStrings); // Output: ['elppa', 'ananab', 'yrrehc']
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num === 2) return true;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+const primeNumbers = numbers.filter(function(num) {
+  return isPrime(num);
+});
+
+console.log(primeNumbers); // Output: [2, 3, 5, 7]
+
+
+const booleans = [true, false, true, false];
+
+booleans.forEach(function(value, index) {
+  console.log(`Index ${index}: ${value}`);
+});
+
+
+
+
+const arrayWithDuplicates = [1, 2, 3, 2, 4, 5, 3, 6, 1];
+
+const uniqueValues = arrayWithDuplicates.filter(function(value, index, self) {
+  return self.indexOf(value) === index;
+});
+
+console.log(uniqueValues);
+
+
+const objects = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Doe' }
+];
+
+objects.forEach(function(obj) {
+  console.log(obj.name);
+});
+
+const strings = ['apple', 'banana', 'cherry'];
+
+const stringsWithIndex = strings.map(function(str, index) {
+  return `${str}${index}`;
+});
+
+console.log(stringsWithIndex);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = numbers.filter(function(num) {
+  return num % 2 === 0;
+});
+
+console.log(evenNumbers);
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(num) {
+  console.log(num * 2);
+});
+
+
+
